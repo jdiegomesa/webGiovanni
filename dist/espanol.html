@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Cookie|Playball|Roboto:300,400" rel="stylesheet">
+</head>
+<body>
+  <header class="Header">
+    <h1 class="Header-title">Giovanni Campo</h1>
+    <h2 class="Header-subtitle">Músico saxofonista flautista</h2>
+    <h3 class="Header-subtitle-text">Eventos musicales en vivo</h3>
+  </header>
+  <nav class="Navigation" id="navigation">
+    <div class="Navigation-button" id="navigationButton" onclick="abrirMenu();"></div>
+    <ul class="Navigation-list">
+      <li class="Navigation-item">Inicio</li>
+      <li class="Navigation-item">Quién soy</li>
+      <li class="Navigation-item">Servicios</li>
+      <li class="Navigation-item">Galería</li>
+      <li class="Navigation-item">Video</li>
+      <li class="Navigation-item">Audios</li>
+      <li class="Navigation-item">Contacto</li>
+    </ul>
+  </nav>
+  <article class="Quien">
+    <div class="Quien-container">
+      <h3 class="Quien-title">Quién soy</h3>
+      <p class="Quien-text">Saxofonista y flautista con más de 30 años de experiencia en la música en géneros como Bolero, Jazz, Bosa Nova, tropical, música colombiana y música clásica brillante.</p>
+      <p class="Quien-text">Saxo tenor en la Banda Sinfónica de Bogotá durante 18 años y saxo barítono en la orquesta de Lucho Bermúdez durante nueve años. Además, integrante de diferentes agrupaciones de Bogotá y en eventos en distinguidos lugares como los clubes El Nogal, Los Lagartos, Metropolitan, Jocky y Gun Club.</p>
+      <p class="Quien-text">Estudios de teoría e instrumentista en el Conservatorio de la Universidad Nacional de Colombia y de 'Elementos de la Música' en la Universidad Javeriana.</p>
+    </div>
+    <div class="Quien-image"></div>
+  </article>
+  <article class="Servicios">
+    <h3 class="Servicios-title">Servicios</h3>
+    <div class="Servicios-element Servicios-element-solista">
+      <div class="Servicios-element-content">
+        <h4 class="Servicios-element-title">Solista</h4>
+        <h5 class="Servicios-element-subtitle">Saxofón o flauta</h5>
+      </div>
+    </div>
+    <div class="Servicios-element Servicios-element-duetos">
+      <div class="Servicios-element-content">
+        <h4 class="Servicios-element-title">Duetos</h4>
+        <h5 class="Servicios-element-subtitle">Acompañamiento con piano o guitarra</h5>
+      </div>
+    </div>
+    <div class="Servicios-element Servicios-element-grupos">
+      <div class="Servicios-element-content">
+        <h4 class="Servicios-element-title">Grupos</h4>
+        <h5 class="Servicios-element-subtitle">Acompañamiento con diferentes insrumentos</h5>
+      </div>
+    </div>
+  </article>
+  <article class="Galery">
+    <h3 class="Galery-title">Galería</h3>
+    <img onclick="galeryOn(this);" class="Galery-image" src="./galery/giovanniCampo1.jpg" alt="">
+    <img onclick="galeryOn(this);" class="Galery-image" src="./galery/giovanniCampo2.jpg" alt="">
+    <img onclick="galeryOn(this);" class="Galery-image" src="./galery/giovanniCampo3.jpg" alt="">
+    <img onclick="galeryOn(this);" class="Galery-image" src="./galery/giovanniCampo4.jpg" alt="">
+    <div class="Galery-window" id="window">
+      <img class="Galery-window-close" onclick="galeryOff();" src="assets/close.svg" alt="close">
+      <img class="Galery-window-image" src="" alt="" id="windowImage">
+    </div>
+  </article>
+  <article class="Video">
+    <h3 class="Video-title">Video</h3>
+    <iframe class="Video-file"src="https://www.youtube.com/embed/rv6ohz0T8ug?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </article>
+  <article class="Audios">
+    <h3 class="Audios-title">Audios</h3>
+    <iframe class="Audios-file" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/202505836&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    <iframe class="Audios-file" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/202514187&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+  </article>
+  <article class="Contacto">
+    <h3 class="Contacto-title">Contacto</h3>
+    <p class="Contacto-description">Si está interesado en mis servicios, envíeme un mensaje por este medio:</p>
+    <form class="Contacto-form" action="index.html" method="post">
+      <input class="Contacto-form-input" type="text" name="nombre" value="" placeholder="Nombre">
+      <input class="Contacto-form-input" type="email" name="email" value="" placeholder="Email">
+      <textarea class="Contacto-form-text" name="mensaje" placeholder="Mensaje"></textarea>
+      <input class="Contacto-form-button" type="submit" name="submit" value="Enviar">
+    </form>
+    <div class="Contacto-data">
+      <div class="Contacto-data-item Contacto-data-city">
+        <img class="Contacto-data-item-image" src="./assets/cityicon.jpg" alt="">
+        <p class="Contacto-data-item-text">Bogotá, Colombia</p>
+      </div>
+      <div class="Contacto-data-item Contacto-data-phone">
+        <img class="Contacto-data-item-image" src="./assets/phoneicon.jpg" alt="">
+        <p class="Contacto-data-item-text">315 3293568</p>
+      </div>
+      <div class="Contacto-data-item Contacto-data-city">
+        <img class="Contacto-data-item-image" src="./assets/cityicon.jpg" alt="">
+        <p class="Contacto-data-item-text">Florida, EE.UU.</p>
+      </div>
+      <div class="Contacto-data-item Contacto-data-phone">
+        <img class="Contacto-data-item-image" src="./assets/phoneicon.jpg" alt="">
+        <p class="Contacto-data-item-text">561 6345256</p>
+      </div>
+      <div class="Contacto-data-item Contacto-data-mail">
+        <img class="Contacto-data-item-image" src="./assets/mailicon.jpg" alt="">
+        <p class="Contacto-data-item-text">edgargiovannicampos@yahoo.com</p>
+      </div>
+    </div>
+  </article>
+  <script type="text/javascript">
+    var nav = document.getElementById('navigation');
+    var navBtn = document.getElementById('navigationButton');
+    function abrirMenu(){
+      nav.style.height = '100vh';
+      navBtn.onclick = cerrarMenu;
+      navBtn.style.backgroundImage = "url('assets/close.svg')";
+    }
+    function cerrarMenu(){
+      nav.style.height = '10vh';
+      navBtn.onclick = abrirMenu;
+      navBtn.style.backgroundImage = "url('assets/menu.svg')";
+    }
+    var win = document.getElementById('window');
+    var winImage = document.getElementById('windowImage');
+    function galeryOn(img){
+      winImage.src = img.src;
+      win.classList.add('active');
+    }
+    function galeryOff(){
+      win.classList.remove('active');
+    }
+  </script>
+</body>
+</html>

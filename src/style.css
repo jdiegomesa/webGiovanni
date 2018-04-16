@@ -1,0 +1,675 @@
+@custom-media --tablet (min-width: 700px);
+@custom-media --desktop (min-width: 1200px);
+:root{
+  --color: #b3a70c;
+}
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-transform: none;
+  color: #000;
+}
+body{
+  overflow-x: hidden;
+}
+.Hero{
+  width: 100vw;
+  height: 93vh;
+  padding-top: 10vh;
+  background: grey url('../assets/fondoportada.jpg') center center no-repeat;
+  background-size: cover;
+  @media(--tablet){
+    text-align: center;
+  }
+  &-title{
+    font-family: 'Cookie', cursive;
+    text-align: center;
+    width: 85vw;
+    margin: 0 auto;
+    font-size: 20vw;
+    color: var(--color);
+    padding-bottom: 40vh;
+    line-height: 15vw;
+    letter-spacing: 1vw;
+    @media(--tablet){
+      font-size: 12vw;
+      letter-spacing: 0.5vw;
+      padding-bottom: 20vh;
+    }
+    @media(--desktop){
+      font-size: 144px;
+      letter-spacing: 6px;
+    }
+  }
+  &-button{
+    width: 70vw;
+    padding: 2vh 2vw;
+    border-radius: 10vw;
+    background-color: var(--color);
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    color: #252519;
+    display: block;
+    font-weight: 400;
+    font-size: 7vw;
+    text-align: center;
+    margin: 2vh auto;
+    transition: 1s;
+    cursor: pointer;
+    &:hover{
+      background-color: #d6c100;
+      transform: scale(1.05);
+      color: #000;
+    }
+    @media(--tablet){
+      width: 20vw;
+      font-size: 2.7vw;
+      display: inline-block;
+      margin: 0 3vw;
+    }
+    @media(--desktop){
+      width: 240px;
+      font-size: 33px;
+      margin: 0 36px;
+    }
+  }
+}
+.Header{
+  padding: 10vh 0;
+  margin-top: 10vh;
+  width: 100vw;
+  background: grey url('../assets/fondoportada.jpg') center center no-repeat;
+  background-size: cover;
+  @media(--tablet){
+    margin: 0;
+  }
+  &-title{
+    font-family: 'Cookie', cursive;
+    text-align: center;
+    width: 85vw;
+    margin: 0 auto;
+    font-size: 20vw;
+    color: var(--color);
+    line-height: 15vw;
+    letter-spacing: 1vw;
+    animation: aparecer 3s;
+    @media(--tablet){
+      font-size: 10vw;
+      letter-spacing: 0.5vw;
+    }
+    @media(--desktop){
+      font-size: 120px;
+      letter-spacing: 6px;
+    }
+  }
+  &-subtitle{
+    width: 80vw;
+    margin: 8vw auto 0;
+    background-color: var(--color);
+    color: #fff;
+    text-transform: uppercase;
+    padding: 2vw 0;
+    font-size: 4vw;
+    border-radius: 2vw;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    animation: aparecer 3s;
+    @media(--tablet){
+      width: 50vw;
+      margin: 4vw auto 0;
+      font-size: 2vw;
+      padding: 1.2vw 0;
+      border-radius: 1vw;
+    }
+    @media(--desktop){
+      width: 600px;
+      margin: 48px auto 0;
+      font-size: 24px;
+      padding: 14px 0;
+    }
+    &-text{
+      width: 50vw;
+      margin: 0 auto;
+      background-color: #000;
+      color: #fff;
+      padding: 2vw 0;
+      font-size: 4vw;
+      border-bottom-left-radius: 2vw;
+      border-bottom-right-radius: 2vw;
+      text-align: center;
+      font-family: 'Cookie', cursive;
+      font-weight: lighter;
+      animation: aparecer 3s;
+      @media(--tablet){
+        width: 30vw;
+        font-size: 2.2vw;
+        padding: 0.8vw 0;
+        border-bottom-left-radius: 1vw;
+        border-bottom-right-radius: 1vw;
+        margin: 0 auto 4vw;
+      }
+      @media(--desktop){
+        width: 360px;
+        font-size: 26px;
+        padding: 10px 0;
+        margin: 0 auto 48px;
+      }
+    }
+  }
+}
+@keyframes aparecer {
+  0%{transform: scale(0); opacity: 0}
+  80%{transform: scale(1.03); opacity: 1}
+  100{transform: scale(1);}
+}
+.Navigation{
+  background-color: #1d4155;
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  overflow-y: hidden;
+  transition: 1.5s;
+  @media(--tablet){
+    position: relative;
+    height: auto;
+  }
+  &-button{
+    background: transparent url('../assets/menu.svg') center center no-repeat;
+    background-size: contain;
+    width: 7vh;
+    height: 7vh;
+    margin: 1.5vh 3vw;
+    @media(--tablet){
+      display: none;
+    }
+  }
+  &-list{
+    text-align: center;
+  }
+  &-item{
+    color: #fff;
+    font-size: 4vh;
+    padding: 3.9vh 0;
+    border-bottom: solid #fff 0.2vh;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    transition: 1s;
+    cursor: pointer;
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.3);
+      color: var(--color);
+    }
+    @media(--tablet){
+      display: inline-block;
+      width: 13.5vw;
+      font-size: 1.3vw;
+      padding: 1.7vw 0;
+      border: none;
+    }
+    @media(--desktop){
+      width: 168px;
+      font-size: 16px;
+      padding: 20px 0;
+    }
+  }
+}
+.Quien{
+  &-container{
+    width: 80vw;
+    padding: 10vw;
+    @media(--tablet){
+      display: inline-block;
+      vertical-align: middle;
+      width: 40vw;
+      padding: 4.5vw;
+    }
+    @media(--desktop){
+      width: 600px;
+    }
+  }
+  &-title{
+    font-family: 'Playball', cursive;
+    font-weight: 200;
+    text-align: center;
+    font-size: 10vw;
+    padding-bottom: 3vw;
+    color: var(--color);
+    @media(--tablet){
+      font-size: 4vw;
+      padding-bottom: 1vw;
+    }
+    @media(--desktop){
+      font-size: 48px;
+      padding-bottom: 12px;
+    }
+  }
+  &-text{
+    font-family: 'Roboto', sans-serif;
+    padding: 3vw 0;
+    font-size: 4vw;
+    font-weight: 600;
+    text-align: justify;
+    color: #999;
+    line-height: 5.5vw;
+    @media(--tablet){
+      font-size: 1.7vw;
+      font-weight: 400;
+      padding: 1vw 0;
+      line-height: 2.2vw;
+    }
+    @media(--desktop){
+      font-size: 19px;
+      padding: 12px 0;
+      line-height: 26px;
+    }
+  }
+  &-image{
+    width: 100vw;
+    height: 60vw;
+    background: transparent url('../assets/fotoGiovanni.jpg') center top no-repeat;
+    background-size: cover;
+    @media(--tablet){
+      display: inline-block;
+      vertical-align: middle;
+      width: 49vw;
+      height: 55vw;
+    }
+    @media(--desktop){
+      width: 600px;
+      height: 580px;
+    }
+  }
+}
+.Servicios{
+  background: #000 url('../assets/fondoServicios.png');
+  text-align: center;
+  padding-bottom: 10vw;
+  @media(--tablet){
+    padding-bottom: 1vw;
+  }
+  &-title{
+    font-family: 'Playball', cursive;
+    font-weight: 200;
+    font-size: 10vw;
+    padding-top: 5vw;
+    color: #fff;
+    @media(--tablet){
+      font-size: 4vw;
+      padding-top: 3vw;
+    }
+    @media(--desktop){
+      font-size: 48px;
+      padding-top: 36px;
+    }
+  }
+  &-element{
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    margin: 10vw auto;
+    overflow: hidden;
+    @media(--tablet){
+      display: inline-block;
+      width: 20vw;
+      height: 20vw;
+      margin: 3vw 5vw;
+    }
+    @media(--desktop){
+      width: 240px;
+      height: 240px;
+      margin: 36px 60px;
+    }
+    &-solista{
+      background: url('../assets/fotoSolista.jpg');
+      background-size: cover;
+    }
+    &-duetos{
+      background: url('../assets/fotoDuetos.jpg');
+      background-size: cover;
+    }
+    &-grupos{
+      background: url('../assets/fotoGrupos.jpg');
+      background-size: cover;
+    }
+    &-content{
+      background-color: rgba(0,0,0,0.3);
+      width: 60vw;
+      padding: 20vw 0 10vw;
+      height: 30vw;
+      @media(--tablet){
+        width: 20vw;
+        height: 10vw;
+        padding: 5vw 0 4vw;
+      }
+      @media(--desktop){
+        transition: 1s;
+        cursor: pointer;
+        opacity: 0;
+        background-color: rgba(0,0,0,0.5);
+        width: 240px;
+        height: 132px;
+        padding: 60px 0 48px;
+        &:hover{
+          opacity: 1;
+        }
+      }
+    }
+    &-title{
+      font-size: 7vw;
+      text-transform: uppercase;
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+      font-weight: 100;
+      @media(--tablet){
+        font-size: 2.5vw;
+      }
+      @media(--desktop){
+        font-size: 30px;
+      }
+    }
+    &-subtitle{
+      padding-top: 2vw;
+      width: 40vw;
+      margin: 0 auto;
+      font-size: 6vw;
+      font-family: 'Cookie', cursive;
+      font-weight: 200;
+      color: #fff;
+      @media(--tablet){
+        padding-top: 1vw;
+        width: 15vw;
+        font-size: 2.5vw;
+      }
+      @media(--desktop){
+        padding-top: 12px;
+        width: 180px;
+        font-size: 30px;
+      }
+    }
+    &-subtitle::before{
+      content: "";
+      display: block;
+      margin: 0 auto;
+      height: 3vw;
+      width: 30vw;
+      border-top: solid #fff 0.3vw;
+      @media(--tablet){
+        height: 0.5vw;
+        width: 15vw;
+        border-top: solid #fff 0.1vw;
+      }
+      @media(--desktop){
+        height: 6px;
+        width: 180px;
+        border-top: solid #fff 2px;
+      }
+    }
+  }
+}
+.Galery{
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  &-title{
+    font-family: 'Playball', cursive;
+    font-weight: 200;
+    font-size: 10vw;
+    padding: 5vw 0;
+    color: #1d4155;
+    @media(--tablet){
+      font-size: 4vw;
+      padding: 3vw 0;
+    }
+    @media(--desktop){
+      font-size: 48px;
+      padding: 36px 0;
+    }
+  }
+  &-image{
+    margin: 2vw 1vw;
+    width: 46vw;
+    display: inline-block;
+    @media(--tablet){
+      width: 27vw;
+    }
+    @media(--desktop){
+      cursor: pointer;
+      width: 267px;
+      margin: 20px 15px;
+    }
+  }
+  &-window{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 20;
+    display: none;
+    &-close{
+      width: 10vw;
+      height: 10vw;
+      position: absolute;
+      top: 5vh;
+      right: 5vw;
+      @media(--tablet){
+        width: 4vw;
+        height: 4vw;
+      }
+      @media(--desktop){
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+      }
+    }
+    &-image{
+      width: 100vw;
+      margin-top: 30vh;
+      @media(--tablet){
+        width: auto;
+        height: 60vh;
+        margin-top: 20vh;
+      }
+      @media(--desktop){
+        width: 750px;
+        height: auto;
+        margin-top: 100px;
+      }
+    }
+    &.active{
+      display: block;
+    }
+  }
+}
+.Video{
+  text-align: center;
+  &-title{
+    font-family: 'Playball', cursive;
+    font-weight: 200;
+    font-size: 10vw;
+    padding: 5vw 0;
+    color: #1d4155;
+    @media(--tablet){
+      font-size: 4vw;
+      padding: 3vw 0;
+    }
+    @media(--desktop){
+      font-size: 48px;
+      padding: 36px 0;
+    }
+  }
+  &-file{
+    width: 90vw;
+    height: 51vw;
+    display: block;
+    margin: 5vw auto;
+    @media(--tablet){
+      width: 70vw;
+      height: 39vw;
+      margin: 0 auto;
+    }
+    @media(--desktop){
+      width: 840px;
+      height: 473px;
+    }
+  }
+}
+.Audios{
+  text-align: center;
+  &-title{
+    font-family: 'Playball', cursive;
+    font-weight: 200;
+    font-size: 10vw;
+    padding: 5vw 0;
+    color: #1d4155;
+    @media(--tablet){
+      font-size: 4vw;
+      padding: 3vw 0;
+    }
+    @media(--desktop){
+      font-size: 48px;
+      padding: 36px 0;
+    }
+  }
+  &-file{
+    width: 80vw;
+    height: 30vw;
+    display: block;
+    margin: 5vw auto;
+    @media(--tablet){
+      display: inline-block;
+      width: 40vw;
+      height: 15vw;
+      margin: 0 auto;
+    }
+    @media(--desktop){
+      width: 480px;
+      height: 180px;
+    }
+  }
+}
+.Contacto{
+  &-title{
+    font-family: 'Playball', cursive;
+    text-align: center;
+    font-weight: 200;
+    font-size: 10vw;
+    padding: 5vw 0;
+    color: #1d4155;
+    @media(--tablet){
+      font-size: 4vw;
+      padding: 3vw 0;
+    }
+    @media(--desktop){
+      font-size: 48px;
+      padding: 36px 0;
+    }
+  }
+  &-description{
+    font-family: 'Roboto', sans-serif;
+    width: 85vw;
+    margin: 3vw auto 5vw;
+    font-size: 5vw;
+    font-weight: 400;
+    text-align: justify;
+    color: #999;
+    line-height: 5.5vw;
+    @media(--tablet){
+      font-size: 1.7vw;
+      text-align: center;
+      font-weight: 400;
+      padding: 1vw 0;
+      line-height: 2.2vw;
+      margin: 0 auto 3vw;
+    }
+    @media(--desktop){
+      font-size: 19px;
+      padding: 12px 0;
+      line-height: 26px;
+    }
+  }
+  &-form{
+    width: 85vw;
+    display: block;
+    margin: 2vw auto;
+    &-input{
+      width: 85vw;
+      display: block;
+      margin: 2vw auto;
+      border: none;
+      border-bottom: solid #999 0.2vw;
+      font-size: 5vw;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      @media(--tablet){
+        width: 60vw;
+        font-size: 2vw;
+        border-bottom: solid #999 0.1vw;
+      }
+      @media(--desktop){
+        width: 720px;
+        font-size: 24px;
+        border-bottom: solid #999 2px;
+      }
+    }
+    &-text{
+      width: 85vw;
+      min-height: 20vw;
+      display: block;
+      margin: 2vw auto;
+      border: none;
+      border-bottom: solid #999 0.2vw;
+      font-size: 5vw;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      @media(--tablet){
+        width: 60vw;
+        font-size: 2vw;
+        border-bottom: solid #999 0.1vw;
+        min-height: 10vw;
+      }
+      @media(--desktop){
+        width: 720px;
+        min-height: 120px;
+        font-size: 24px;
+        border-bottom: solid #999 2px;
+      }
+    }
+    &-button{
+      width: 30vw;
+      padding: 2vw 0;
+      margin: 1vw auto;
+      display: block;
+      border: none;
+      background-color: var(--color);
+      text-transform: uppercase;
+      font-family: 'Roboto', sans-serif;
+      font-size: 4vw;
+      font-weight: 400;
+      color: #fff;
+      border-radius: 5vw;
+      @media(--tablet){
+        width: 15vw;
+        font-size: 2vw;
+        padding: 1vw 0;
+      }
+      @media(--desktop){
+        width: 180px;
+        font-size: 24px;
+        padding: 12px 0;
+        transition: 1s;
+        cursor: pointer;
+        &:hover{
+          background-color: #1d4155;
+        }
+      }
+    }
+  }
+  &-data{
+
+  }
+}
